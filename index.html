@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="theme.css" media="screen">
+    <title>Subprime</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>Subprime Calculator</h1>
+      <h4 id="balance">Balance: 500</h4>
+    </div>
+    <div class="wrapper">
+      <div class="ground">
+        <h3>Create a Collateralized Debt Obligation</h3>
+        <div>
+          <input type="text" name="CDO1" id="lowerCDO">
+          <label for="lowerCDO">Lowers</label>
+        </div>
+        <div>
+          <input type="text" name="CDO2" id="middleCDO">
+          <label for="middleCDO">Middles</label>
+        </div>
+        <div>
+          <input type="text" name="CDO3" id="upperCDO">
+          <label for="upperCDO">Uppers</label>
+        </div>
+        <div>
+          <input type="text" name="rating" id="rating">
+          <label for="rating">Rating Increase</label>
+        </div>
+        <button type="button" onclick="layCDO()" class="button">Create a CDO</button>
+      </div>
+      <div class="ground">
+        <h3>Buy a Mortgage Backed Security</h3>
+        <div>
+          <select id="list1">
+            <option value="0">Select Bank</option>
+            <option value="1">Bank 1</option>
+            <option value="2">Bank 2</option>
+            <option value="3">Bank 3</option>
+            <option value="4">Bank 4</option>
+          </select>
+          <select id="class1">
+            <option value="3">Select Class</option>
+            <option value="0">Lower</option>
+            <option value="1">Middle</option>
+            <option value="2">Upper</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" onclick="buyMBS()" class="button">Buy MBS</button>
+        </div>
+      </div>
+      <div class="ground">
+        <h3>Sell a Mortgage Backed Security</h3>
+        <div>
+          <select id="list2">
+            <option value="0">Select Bank</option>
+            <option value="1">Bank 1</option>
+            <option value="2">Bank 2</option>
+            <option value="3">Bank 3</option>
+            <option value="4">Bank 4</option>
+          </select>
+          <select id="class2">
+            <option value="3">Select Class</option>
+            <option value="0">Lower</option>
+            <option value="1">Middle</option>
+            <option value="2">Upper</option>
+          </select>
+        </div>
+        <button type="button" onclick="sellMBS()" class="button">Sell MBS</button>
+      </div>
+      <div class="ground">
+        <h3>Buy a Credit Default Swap</h3>
+        <div>
+          <select id="list3">
+            <option value="0">Select Bank</option>
+            <option value="1">Bank 1</option>
+            <option value="2">Bank 2</option>
+            <option value="3">Bank 3</option>
+            <option value="4">Bank 4</option>
+          </select>
+          <select id="class3">
+            <option value="3">Select Class</option>
+            <option value="0">Lower</option>
+            <option value="1">Middle</option>
+            <option value="2">Upper</option>
+          </select>
+        </div>
+        <button type="button" onclick="buyCDS()" class="button">Buy CDS</button>
+      </div>
+      <div class="ground">
+        <h3>Sell a Credit Default Swap</h3>
+        <div>
+          <select id="list4">
+            <option value="0">Select Bank</option>
+            <option value="1">Bank 1</option>
+            <option value="2">Bank 2</option>
+            <option value="3">Bank 3</option>
+            <option value="4">Bank 4</option>
+          </select>
+          <select id="class4">
+            <option value="3">Select Class</option>
+            <option value="0">Lower</option>
+            <option value="1">Middle</option>
+            <option value="2">Upper</option>
+          </select>
+        </div>
+        <button type="button" onclick="sellCDS()" class="button">Sell CDS</button>
+      </div>
+      <div class="ground">
+        <h3>Deposit / Withdraw Money</h3>
+        <div>
+          <label for="money1">Deposit Money</label>
+          <input type="text" name="deposit" id="money1">
+        </div>
+        <div>
+          <label for="money2">Subtract Money</label>
+          <input type="text" name="deposit" id="money2">
+        </div>
+        <div>
+          <button type="button" onclick="addMoney()" class="button">Add Money</button>
+          <button type="button" onclick="subMoney()" class="button">Subtract Money</button>
+        </div>
+      </div>
+      <div class="ground">
+        <h3>End of Turn Calculations</h3>
+        <div>
+          <input type="text" name="lowForeclose" id="lowForeclose">
+          <label for="lowForeclose">Lower Foreclosures</label>
+        </div>
+        <div>
+          <input type="text" name="midForeclose" id="midForeclose">
+          <label for="midForeclose">Middle Foreclosures</label>
+        </div>
+        <div>
+          <input type="text" name="upForeclose" id="upForeclose">
+          <label for="upForeclose">Upper Foreclosures</label>
+        </div>
+        <button type="button" onclick="endTurn()" class="button">End of Turn</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="MyBank.js"></script>
+  <script src="Bank.js"></script>
+  <script src="app.js"></script>
+</html>
